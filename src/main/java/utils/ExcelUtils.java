@@ -10,7 +10,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class ExcelUtils {
-    private static final String FILE_PATH = "src/main/resources/TestData.xlsx"; // Main resources
+    private static final String FILE_PATH = "src/main/resources/TestData.xlsx";
 
 
     public static List<List<String>> readExcelFile(String fileName) {
@@ -22,7 +22,7 @@ public class ExcelUtils {
             // Get the first sheet
             Sheet sheet = workbook.getSheetAt(0);
 
-            // Iterate over rows
+            // Iterate over the rows
             for (int i=1; i<=sheet.getLastRowNum();i++) {
                 Row row = sheet.getRow(i);
                 List<String> cityPair = new ArrayList<>();
@@ -32,18 +32,13 @@ public class ExcelUtils {
                 }
                 cityPairs.add(cityPair);
 
-
             }
-
-
 
         } catch (IOException e) {
             e.printStackTrace();
         }
         return cityPairs;
     }
-
-
 
 
 
