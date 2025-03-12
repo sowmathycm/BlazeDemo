@@ -33,7 +33,7 @@ public class ScreenshotUtil {
 
         try {
             FileUtils.copyFile(screenshot, new File(screenshotPath));
-            System.out.println("✅ Screenshot saved: " + new File(screenshotPath).getAbsolutePath());
+            System.out.println("Screenshot saved: " + new File(screenshotPath).getAbsolutePath());
         } catch (IOException e) {
             System.err.println("Failed to save screenshot: " + e.getMessage());
         }
