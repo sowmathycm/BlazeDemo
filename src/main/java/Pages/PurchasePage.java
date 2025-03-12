@@ -15,7 +15,7 @@ public class PurchasePage {
         this.driver = driver;
     }
 
-    // ✅ Method to check if 'Total Cost' is displayed in xxx.xx format
+    // Method to check if 'Total Cost' is displayed in xxx.xx format
     public boolean verifyTotalCostFormat() {
         WebElement totalCostElement = driver.findElement(totalCostField);
         String totalCostText = totalCostElement.getText();
@@ -25,7 +25,7 @@ public class PurchasePage {
         return pattern.matcher(totalCostText).find();
     }
 
-    // ✅ Method to click 'Purchase Flight' button
+    // Method to click 'Purchase Flight' button
     public void clickPurchaseFlight() {
         driver.findElement(purchaseButton).click();
     }

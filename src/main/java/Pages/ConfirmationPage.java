@@ -21,7 +21,7 @@ public class ConfirmationPage {
     // Method to retrieve and print the confirmation ID
     public String getConfirmationId() {
         String id = driver.findElement(confirmationId).getText();
-        System.out.println("✅ Purchase Confirmation ID: " + id);
+        System.out.println("Purchase Confirmation ID: " + id);
         return id;
     }
 }
